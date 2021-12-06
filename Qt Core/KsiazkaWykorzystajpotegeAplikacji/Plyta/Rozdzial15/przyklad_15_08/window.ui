@@ -1,0 +1,95 @@
+<ui version="4.0" >
+ <class>Window</class>
+ <widget class="QMainWindow" name="Window" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="font" >
+   <font>
+    <family>Verdana</family>
+   </font>
+  </property>
+  <property name="windowTitle" >
+   <string>Grupowanie elementów menu</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" />
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>300</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu1" >
+    <property name="title" >
+     <string>Menu1</string>
+    </property>
+    <addaction name="actionMenu11" />
+    <addaction name="separator" />
+    <addaction name="actionMenu12" />
+    <addaction name="actionMenu13" />
+    <addaction name="actionMenu14" />
+    <addaction name="separator" />
+    <addaction name="actionMenu15" />
+   </widget>
+   <addaction name="menuMenu1" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" >
+   <property name="sizeGripEnabled" >
+    <bool>false</bool>
+   </property>
+  </widget>
+  <action name="actionMenu11" >
+   <property name="checkable" >
+    <bool>false</bool>
+   </property>
+   <property name="text" >
+    <string>menu11</string>
+   </property>
+  </action>
+  <action name="actionMenu12" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Menu12</string>
+   </property>
+  </action>
+  <action name="actionMenu13" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Menu13</string>
+   </property>
+   <property name="visible" >
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionMenu14" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Menu14</string>
+   </property>
+  </action>
+  <action name="actionMenu15" >
+   <property name="text" >
+    <string>Menu15</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

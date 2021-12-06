@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ItemWeather.qml</file>
+        <file>Img/01-s.png</file>
+        <file>Img/02-s.png</file>
+        <file>Img/03-s.png</file>
+        <file>Img/04-s.png</file>
+        <file>Img/05-s.png</file>
+        <file>Img/06-s.png</file>
+        <file>Img/07-s.png</file>
+        <file>Img/08-s.png</file>
+        <file>Img/11-s.png</file>
+        <file>Img/12-s.png</file>
+        <file>Img/13-s.png</file>
+        <file>Img/14-s.png</file>
+        <file>Img/15-s.png</file>
+        <file>Img/16-s.png</file>
+        <file>Img/17-s.png</file>
+        <file>Img/18-s.png</file>
+        <file>Img/19-s.png</file>
+        <file>Img/20-s.png</file>
+        <file>Img/21-s.png</file>
+        <file>Img/22-s.png</file>
+        <file>Img/23-s.png</file>
+        <file>Img/25-s.png</file>
+        <file>Img/26-s.png</file>
+        <file>Img/29-s.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,322 @@
+<ui version="4.0" >
+ <class>Window</class>
+ <widget class="QMainWindow" name="Window" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Rysownik Qt</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="mywindow.qrc" >:/images/qt.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <layout class="QVBoxLayout" >
+    <item>
+     <widget class="QScrollArea" name="scrollArea" >
+      <property name="frameShape" >
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow" >
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <widget class="PaintArea" native="1" name="paint" >
+       <property name="geometry" >
+        <rect>
+         <x>11</x>
+         <y>11</y>
+         <width>560</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="cursor" >
+        <cursorShape>CrossCursor</cursorShape>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu" >
+    <property name="title" >
+     <string>&amp;Plik</string>
+    </property>
+    <addaction name="fileMenuNew" />
+    <addaction name="fileMenuOpen" />
+    <addaction name="fileMenuSave" />
+    <addaction name="fileMenuSaveAs" />
+    <addaction name="separator" />
+    <addaction name="fileMenuQuit" />
+   </widget>
+   <widget class="QMenu" name="penMenu" >
+    <property name="title" >
+     <string>Pióro</string>
+    </property>
+    <widget class="QMenu" name="penMenuStyle" >
+     <property name="title" >
+      <string>Styl linii</string>
+     </property>
+     <addaction name="actionQt_SolidLine" />
+     <addaction name="actionQt_DashLine" />
+     <addaction name="actionQt_DotLine" />
+     <addaction name="actionQt_DashDotLine" />
+     <addaction name="actionQt_DashDotDotLine" />
+    </widget>
+    <widget class="QMenu" name="penMenuCapStyle" >
+     <property name="title" >
+      <string>Zakończenie linii</string>
+     </property>
+     <addaction name="actionQt_SquareCap" />
+     <addaction name="actionQt_FlatCap" />
+     <addaction name="actionQt_RoundCap" />
+    </widget>
+    <widget class="QMenu" name="penMenuJoinStyle" >
+     <property name="title" >
+      <string>Połączenie linii</string>
+     </property>
+     <addaction name="actionQt_BevelJoin" />
+     <addaction name="actionQt_MiterJoin" />
+     <addaction name="actionQt_RoundJoin" />
+    </widget>
+    <addaction name="penMenuWidth" />
+    <addaction name="penMenuColor" />
+    <addaction name="penMenuStyle" />
+    <addaction name="penMenuCapStyle" />
+    <addaction name="penMenuJoinStyle" />
+   </widget>
+   <addaction name="fileMenu" />
+   <addaction name="penMenu" />
+  </widget>
+  <widget class="QStatusBar" name="statusBar" >
+   <property name="statusTip" >
+    <string/>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBarFile" >
+   <property name="windowTitle" >
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea" >
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak" >
+    <bool>false</bool>
+   </attribute>
+   <addaction name="fileMenuNew" />
+   <addaction name="fileMenuOpen" />
+   <addaction name="fileMenuSave" />
+  </widget>
+  <action name="fileMenuNew" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/new.png</iconset>
+   </property>
+   <property name="text" >
+    <string>&amp;Nowy</string>
+   </property>
+   <property name="statusTip" >
+    <string>Tworzy nowy plik</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="fileMenuOpen" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/open.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Otwórz</string>
+   </property>
+   <property name="statusTip" >
+    <string>Odczytuje plik</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="fileMenuSave" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/save.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Zapisz</string>
+   </property>
+   <property name="statusTip" >
+    <string>Zapisuje bieżące zmiany</string>
+   </property>
+  </action>
+  <action name="fileMenuSaveAs" >
+   <property name="text" >
+    <string>Zapisz jako</string>
+   </property>
+   <property name="statusTip" >
+    <string>Zapisuje jako nowy plik</string>
+   </property>
+  </action>
+  <action name="fileMenuQuit" >
+   <property name="text" >
+    <string>Wyjście</string>
+   </property>
+   <property name="statusTip" >
+    <string>Zakończenie działania programu</string>
+   </property>
+  </action>
+  <action name="penMenuWidth" >
+   <property name="text" >
+    <string>Grubość</string>
+   </property>
+   <property name="toolTip" >
+    <string>Grubość pióra</string>
+   </property>
+   <property name="statusTip" >
+    <string>Określenie grubości pióra</string>
+   </property>
+  </action>
+  <action name="penMenuColor" >
+   <property name="text" >
+    <string>Kolor</string>
+   </property>
+   <property name="toolTip" >
+    <string>Kolor pióra</string>
+   </property>
+   <property name="statusTip" >
+    <string>Określenie koloru pióra</string>
+   </property>
+  </action>
+  <action name="actionQt_SolidLine" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset/>
+   </property>
+   <property name="text" >
+    <string>Qt::SolidLine</string>
+   </property>
+  </action>
+  <action name="actionQt_DashLine" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::DashLine</string>
+   </property>
+  </action>
+  <action name="actionQt_DotLine" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::DotLine</string>
+   </property>
+  </action>
+  <action name="actionQt_DashDotLine" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::DashDotLine</string>
+   </property>
+  </action>
+  <action name="actionQt_DashDotDotLine" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::DashDotDotLine</string>
+   </property>
+  </action>
+  <action name="actionQt_SquareCap" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::SquareCap</string>
+   </property>
+  </action>
+  <action name="actionQt_FlatCap" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::FlatCap</string>
+   </property>
+  </action>
+  <action name="actionQt_RoundCap" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::RoundCap</string>
+   </property>
+  </action>
+  <action name="actionQt_BevelJoin" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::BevelJoin</string>
+   </property>
+  </action>
+  <action name="actionQt_MiterJoin" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::MiterJoin</string>
+   </property>
+  </action>
+  <action name="actionQt_RoundJoin" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::RoundJoin</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PaintArea</class>
+   <extends>QWidget</extends>
+   <header>paintarea.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QScrollArea</class>
+   <extends>QFrame</extends>
+   <header location="global" >QScrollArea</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="mywindow.qrc" />
+ </resources>
+ <connections/>
+</ui>

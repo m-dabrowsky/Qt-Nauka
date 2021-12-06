@@ -1,0 +1,10 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>translations/qt_pl.qm</file>
+    <file>images/qt.png</file>
+    <file>images/cdtoparent.png</file>
+    <file>images/dir.png</file>
+    <file>images/file.png</file>
+    <file>images/symbolic_link.png</file>
+</qresource>
+</RCC>

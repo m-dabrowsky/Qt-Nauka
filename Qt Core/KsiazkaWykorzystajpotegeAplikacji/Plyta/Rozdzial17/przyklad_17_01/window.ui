@@ -1,0 +1,163 @@
+<ui version="4.0" >
+ <class>Form</class>
+ <widget class="QWidget" name="Form" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>534</width>
+    <height>345</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Klient FTP</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="mywindow.qrc" >:/images/qt.png</iconset>
+  </property>
+  <layout class="QGridLayout" >
+   <item row="0" column="0" >
+    <widget class="QLabel" name="labelFTP" >
+     <property name="text" >
+      <string>Serwer FTP</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="4" >
+    <widget class="QLineEdit" name="lineEdit" >
+     <property name="toolTip" >
+      <string>Adres URL zdalnego komputera</string>
+     </property>
+     <property name="text" >
+      <string>ftp://</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="5" >
+    <widget class="QTreeWidget" name="treeWidget" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="toolTip" >
+      <string>Pliki i foldery na zdalnym komputerze</string>
+     </property>
+     <column>
+      <property name="text" >
+       <string>Nazwa</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Rozmiar</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Właściciel</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Grupa</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Czas</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="2" column="1" >
+    <widget class="QPushButton" name="pushButtonConnect" >
+     <property name="toolTip" >
+      <string>Połączenie ze zdalnym komputerem</string>
+     </property>
+     <property name="text" >
+      <string>Połącz</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2" >
+    <widget class="QPushButton" name="pushButtonDisconnect" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="toolTip" >
+      <string>Rozłączenie połączenia ze zdalnym komputerem</string>
+     </property>
+     <property name="text" >
+      <string>Rozłącz</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3" >
+    <widget class="QPushButton" name="pushButtonCdUp" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="toolTip" >
+      <string>Przejście do folderu nadrzędnego</string>
+     </property>
+     <property name="text" >
+      <string/>
+     </property>
+     <property name="icon" >
+      <iconset resource="mywindow.qrc" >:/images/cdtoparent.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="4" >
+    <widget class="QPushButton" name="pushButtonGet" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="toolTip" >
+      <string>Pobranie pliku</string>
+     </property>
+     <property name="text" >
+      <string>Pobierz</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="5" >
+    <widget class="Line" name="line" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4" >
+    <widget class="QPushButton" name="pushButtonQuit" >
+     <property name="toolTip" >
+      <string>Zakończenie działania programu</string>
+     </property>
+     <property name="text" >
+      <string>Wyjście</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="mywindow.qrc" />
+ </resources>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX" >
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY" >
+   <number>10</number>
+  </property>
+  <property name="gridSnapX" >
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY" >
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible" >
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>

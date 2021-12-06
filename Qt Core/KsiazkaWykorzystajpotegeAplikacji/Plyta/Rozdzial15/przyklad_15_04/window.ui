@@ -1,0 +1,115 @@
+<ui version="4.0" >
+ <class>Window</class>
+ <widget class="QMainWindow" name="Window" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="font" >
+   <font>
+    <family>Verdana</family>
+   </font>
+  </property>
+  <property name="windowTitle" >
+   <string>Różne czcionki w menu </string>
+  </property>
+  <widget class="QWidget" name="centralwidget" />
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>300</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu1" >
+    <property name="title" >
+     <string>Menu1</string>
+    </property>
+    <addaction name="actionMenu11" />
+    <addaction name="actionMenu12" />
+    <addaction name="actionMenu13" />
+    <addaction name="actionMenu14" />
+    <addaction name="actionMenu15" />
+    <addaction name="actionMenu16" />
+   </widget>
+   <addaction name="menuMenu1" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" >
+   <property name="sizeGripEnabled" >
+    <bool>false</bool>
+   </property>
+  </widget>
+  <action name="actionMenu11" >
+   <property name="text" >
+    <string>Czcionka domyślna</string>
+   </property>
+  </action>
+  <action name="actionMenu12" >
+   <property name="text" >
+    <string>Batang Bold 12</string>
+   </property>
+   <property name="font" >
+    <font>
+     <family>Batang</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+  <action name="actionMenu13" >
+   <property name="text" >
+    <string>Tahoma Italic 6</string>
+   </property>
+   <property name="font" >
+    <font>
+     <family>Tahoma</family>
+     <pointsize>6</pointsize>
+     <italic>true</italic>
+    </font>
+   </property>
+  </action>
+  <action name="actionMenu14" >
+   <property name="text" >
+    <string>Arial Underline 18</string>
+   </property>
+   <property name="font" >
+    <font>
+     <family>Arial</family>
+     <pointsize>18</pointsize>
+     <underline>true</underline>
+    </font>
+   </property>
+  </action>
+  <action name="actionMenu15" >
+   <property name="text" >
+    <string>Times StrikeOut 14</string>
+   </property>
+   <property name="font" >
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+     <strikeout>true</strikeout>
+    </font>
+   </property>
+  </action>
+  <action name="actionMenu16" >
+   <property name="text" >
+    <string>Courier 8</string>
+   </property>
+   <property name="font" >
+    <font>
+     <family>Courier</family>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

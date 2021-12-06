@@ -1,0 +1,105 @@
+<ui version="4.0" >
+ <class>Window</class>
+ <widget class="QMainWindow" name="Window" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="font" >
+   <font>
+    <family>Verdana</family>
+   </font>
+  </property>
+  <property name="windowTitle" >
+   <string>Właściwości elementów menu</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" />
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>300</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu1" >
+    <property name="title" >
+     <string>Menu1</string>
+    </property>
+    <addaction name="actionMenu11" />
+    <addaction name="actionMenu12" />
+    <addaction name="actionMenu13" />
+   </widget>
+   <addaction name="menuMenu1" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" >
+   <property name="sizeGripEnabled" >
+    <bool>false</bool>
+   </property>
+  </widget>
+  <action name="actionMenu11" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>menu11</string>
+   </property>
+  </action>
+  <action name="actionMenu12" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="text" >
+    <string>Menu12</string>
+   </property>
+  </action>
+  <action name="actionMenu13" >
+   <property name="text" >
+    <string>Menu13</string>
+   </property>
+   <property name="visible" >
+    <bool>false</bool>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionMenu11</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>actionMenu13</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionMenu13</sender>
+   <signal>triggered()</signal>
+   <receiver>actionMenu11</receiver>
+   <slot>toggle()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

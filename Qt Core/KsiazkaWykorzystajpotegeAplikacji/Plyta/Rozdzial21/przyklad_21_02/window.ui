@@ -1,0 +1,39 @@
+<ui version="4.0" >
+ <class>Form</class>
+ <widget class="QDialog" name="Form" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>259</width>
+    <height>71</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Wątki z synchronizacją</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="mywindow.qrc" >:/images/qt.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <widget class="QLabel" name="label" >
+     <property name="text" >
+      <string>a = </string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton" >
+     <property name="text" >
+      <string>Start</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="mywindow.qrc" />
+ </resources>
+ <connections/>
+</ui>

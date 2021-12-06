@@ -1,0 +1,17 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+        <file>images/line.png</file>
+        <file>images/new.png</file>
+        <file>images/open.png</file>
+        <file>images/paintbrush.png</file>
+        <file>images/qt.png</file>
+        <file>images/save.png</file>
+        <file>images/print.png</file>
+        <file>images/rectangle.png</file>
+        <file>images/ellipse.png</file>
+        <file>images/filledrectangle.png</file>
+        <file>images/filledellipse.png</file>
+        <file>images/text.png</file>
+        <file>translations/qt_pl.qm</file>
+</qresource>
+</RCC>

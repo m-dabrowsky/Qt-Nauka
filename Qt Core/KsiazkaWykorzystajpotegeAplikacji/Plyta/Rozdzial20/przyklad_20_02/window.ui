@@ -1,0 +1,641 @@
+<ui version="4.0" >
+ <class>Window</class>
+ <widget class="QMainWindow" name="Window" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Rysownik Qt</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="mywindow.qrc" >:/images/qt.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <layout class="QVBoxLayout" >
+    <item>
+     <widget class="QScrollArea" name="scrollArea" >
+      <property name="frameShape" >
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow" >
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <widget class="PaintArea" native="1" name="paint" >
+       <property name="geometry" >
+        <rect>
+         <x>11</x>
+         <y>11</y>
+         <width>560</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="cursor" >
+        <cursorShape>CrossCursor</cursorShape>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu" >
+    <property name="title" >
+     <string>&amp;Plik</string>
+    </property>
+    <addaction name="fileMenuNew" />
+    <addaction name="fileMenuOpen" />
+    <addaction name="fileMenuSave" />
+    <addaction name="fileMenuSaveAs" />
+    <addaction name="fileMenuPrint" />
+    <addaction name="separator" />
+    <addaction name="fileMenuQuit" />
+   </widget>
+   <widget class="QMenu" name="penMenu" >
+    <property name="title" >
+     <string>Pióro</string>
+    </property>
+    <widget class="QMenu" name="penMenuStyle" >
+     <property name="title" >
+      <string>Styl linii</string>
+     </property>
+     <addaction name="actionQt_SolidLine" />
+     <addaction name="actionQt_DashLine" />
+     <addaction name="actionQt_DotLine" />
+     <addaction name="actionQt_DashDotLine" />
+     <addaction name="actionQt_DashDotDotLine" />
+    </widget>
+    <widget class="QMenu" name="penMenuCapStyle" >
+     <property name="title" >
+      <string>Zakończenie linii</string>
+     </property>
+     <addaction name="actionQt_SquareCap" />
+     <addaction name="actionQt_FlatCap" />
+     <addaction name="actionQt_RoundCap" />
+    </widget>
+    <widget class="QMenu" name="penMenuJoinStyle" >
+     <property name="title" >
+      <string>Połączenie linii</string>
+     </property>
+     <addaction name="actionQt_BevelJoin" />
+     <addaction name="actionQt_MiterJoin" />
+     <addaction name="actionQt_RoundJoin" />
+    </widget>
+    <addaction name="penMenuWidth" />
+    <addaction name="penMenuColor" />
+    <addaction name="penMenuStyle" />
+    <addaction name="penMenuCapStyle" />
+    <addaction name="penMenuJoinStyle" />
+    <addaction name="penMenuAA" />
+   </widget>
+   <widget class="QMenu" name="drawingToolsMenu" >
+    <property name="title" >
+     <string>Narzędzie</string>
+    </property>
+    <addaction name="drawingToolsMenuPen" />
+    <addaction name="drawingToolsMenuLine" />
+    <addaction name="drawingToolsMenuRect" />
+    <addaction name="drawingToolsMenuEllipse" />
+    <addaction name="drawingToolsMenuFillRect" />
+    <addaction name="drawingToolsMenuFillEllipse" />
+    <addaction name="drawingToolsMenuText" />
+   </widget>
+   <widget class="QMenu" name="brushMenu" >
+    <property name="title" >
+     <string>Pędzel</string>
+    </property>
+    <widget class="QMenu" name="brushMenuStyle" >
+     <property name="title" >
+      <string>Styl</string>
+     </property>
+     <addaction name="actionQt_NoBrush" />
+     <addaction name="actionQt_SolidPattern" />
+     <addaction name="actionQt_Dense1Pattern" />
+     <addaction name="actionQt_Dense2Pattern" />
+     <addaction name="actionQt_Dense3Pattern" />
+     <addaction name="actionQt_Dense4Pattern" />
+     <addaction name="actionQt_Dense5Pattern" />
+     <addaction name="actionQt_Dense6Pattern" />
+     <addaction name="actionQt_Dense7Pattern" />
+     <addaction name="actionQt_HorPattern" />
+     <addaction name="actionQt_VerPattern" />
+     <addaction name="actionQt_CrossPattern" />
+     <addaction name="actionQt_BDiagPattern" />
+     <addaction name="actionQt_FDiagPattern" />
+     <addaction name="actionQt_DiagCrossPattern" />
+    </widget>
+    <addaction name="brushMenuColor" />
+    <addaction name="brushMenuStyle" />
+   </widget>
+   <widget class="QMenu" name="textMenu" >
+    <property name="title" >
+     <string>Napis</string>
+    </property>
+    <addaction name="textMenuText" />
+    <addaction name="textMenuFont" />
+    <addaction name="textMenuAA" />
+   </widget>
+   <addaction name="fileMenu" />
+   <addaction name="penMenu" />
+   <addaction name="brushMenu" />
+   <addaction name="textMenu" />
+   <addaction name="drawingToolsMenu" />
+  </widget>
+  <widget class="QStatusBar" name="statusBar" >
+   <property name="statusTip" >
+    <string/>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBarFile" >
+   <property name="windowTitle" >
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea" >
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak" >
+    <bool>false</bool>
+   </attribute>
+   <addaction name="fileMenuNew" />
+   <addaction name="fileMenuOpen" />
+   <addaction name="fileMenuSave" />
+   <addaction name="fileMenuPrint" />
+  </widget>
+  <widget class="QToolBar" name="toolBarDrawingTools" >
+   <property name="windowTitle" >
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea" >
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak" >
+    <bool>false</bool>
+   </attribute>
+   <addaction name="drawingToolsMenuPen" />
+   <addaction name="drawingToolsMenuLine" />
+   <addaction name="drawingToolsMenuRect" />
+   <addaction name="drawingToolsMenuEllipse" />
+   <addaction name="drawingToolsMenuFillRect" />
+   <addaction name="drawingToolsMenuFillEllipse" />
+   <addaction name="drawingToolsMenuText" />
+  </widget>
+  <action name="fileMenuNew" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/new.png</iconset>
+   </property>
+   <property name="text" >
+    <string>&amp;Nowy</string>
+   </property>
+   <property name="statusTip" >
+    <string>Tworzy nowy plik</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="fileMenuOpen" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/open.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Otwórz</string>
+   </property>
+   <property name="statusTip" >
+    <string>Odczytuje plik</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="fileMenuSave" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/save.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Zapisz</string>
+   </property>
+   <property name="statusTip" >
+    <string>Zapisuje bieżące zmiany</string>
+   </property>
+  </action>
+  <action name="fileMenuSaveAs" >
+   <property name="text" >
+    <string>Zapisz jako</string>
+   </property>
+   <property name="statusTip" >
+    <string>Zapisuje jako nowy plik</string>
+   </property>
+  </action>
+  <action name="fileMenuQuit" >
+   <property name="text" >
+    <string>Wyjście</string>
+   </property>
+   <property name="statusTip" >
+    <string>Zakończenie działania programu</string>
+   </property>
+  </action>
+  <action name="penMenuWidth" >
+   <property name="text" >
+    <string>Grubość</string>
+   </property>
+   <property name="toolTip" >
+    <string>Grubość pióra</string>
+   </property>
+   <property name="statusTip" >
+    <string>Określenie grubości pióra</string>
+   </property>
+  </action>
+  <action name="penMenuColor" >
+   <property name="text" >
+    <string>Kolor</string>
+   </property>
+   <property name="toolTip" >
+    <string>Kolor pióra</string>
+   </property>
+   <property name="statusTip" >
+    <string>Określenie koloru pióra</string>
+   </property>
+  </action>
+  <action name="actionQt_SolidLine" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset/>
+   </property>
+   <property name="text" >
+    <string>Qt::SolidLine</string>
+   </property>
+  </action>
+  <action name="actionQt_DashLine" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::DashLine</string>
+   </property>
+  </action>
+  <action name="actionQt_DotLine" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::DotLine</string>
+   </property>
+  </action>
+  <action name="actionQt_DashDotLine" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::DashDotLine</string>
+   </property>
+  </action>
+  <action name="actionQt_DashDotDotLine" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::DashDotDotLine</string>
+   </property>
+  </action>
+  <action name="actionQt_SquareCap" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::SquareCap</string>
+   </property>
+  </action>
+  <action name="actionQt_FlatCap" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::FlatCap</string>
+   </property>
+  </action>
+  <action name="actionQt_RoundCap" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::RoundCap</string>
+   </property>
+  </action>
+  <action name="actionQt_BevelJoin" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::BevelJoin</string>
+   </property>
+  </action>
+  <action name="actionQt_MiterJoin" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::MiterJoin</string>
+   </property>
+  </action>
+  <action name="actionQt_RoundJoin" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::RoundJoin</string>
+   </property>
+  </action>
+  <action name="drawingToolsMenuPen" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/paintbrush.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Pióro</string>
+   </property>
+  </action>
+  <action name="drawingToolsMenuLine" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/line.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Linia</string>
+   </property>
+  </action>
+  <action name="drawingToolsMenuRect" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/rectangle.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Prostokąt</string>
+   </property>
+  </action>
+  <action name="drawingToolsMenuEllipse" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/ellipse.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Elipsa</string>
+   </property>
+  </action>
+  <action name="drawingToolsMenuFillRect" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/filledrectangle.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Wypełniony prostokąt</string>
+   </property>
+  </action>
+  <action name="drawingToolsMenuFillEllipse" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/filledellipse.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Wypełniona elipsa</string>
+   </property>
+  </action>
+  <action name="brushMenuColor" >
+   <property name="text" >
+    <string>Kolor</string>
+   </property>
+   <property name="toolTip" >
+    <string>Kolor pędzla</string>
+   </property>
+  </action>
+  <action name="actionQt_NoBrush" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::NoBrush</string>
+   </property>
+  </action>
+  <action name="actionQt_SolidPattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::SolidPattern</string>
+   </property>
+  </action>
+  <action name="actionQt_Dense1Pattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::Dense1Pattern</string>
+   </property>
+  </action>
+  <action name="actionQt_Dense2Pattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::Dense2Pattern</string>
+   </property>
+  </action>
+  <action name="actionQt_Dense3Pattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::Dense3Pattern</string>
+   </property>
+  </action>
+  <action name="actionQt_Dense4Pattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::Dense4Pattern</string>
+   </property>
+  </action>
+  <action name="actionQt_Dense5Pattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::Dense5Pattern</string>
+   </property>
+  </action>
+  <action name="actionQt_Dense6Pattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::Dense6Pattern</string>
+   </property>
+  </action>
+  <action name="actionQt_Dense7Pattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::Dense7Pattern</string>
+   </property>
+  </action>
+  <action name="actionQt_HorPattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::HorPattern</string>
+   </property>
+  </action>
+  <action name="actionQt_VerPattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::VerPattern</string>
+   </property>
+  </action>
+  <action name="actionQt_CrossPattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::CrossPattern</string>
+   </property>
+  </action>
+  <action name="actionQt_BDiagPattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::BDiagPattern</string>
+   </property>
+  </action>
+  <action name="actionQt_FDiagPattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::FDiagPattern</string>
+   </property>
+  </action>
+  <action name="actionQt_DiagCrossPattern" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Qt::DiagCrossPattern</string>
+   </property>
+  </action>
+  <action name="drawingToolsMenuText" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/text.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Napis</string>
+   </property>
+  </action>
+  <action name="textMenuText" >
+   <property name="text" >
+    <string>Tekst</string>
+   </property>
+  </action>
+  <action name="textMenuFont" >
+   <property name="text" >
+    <string>Czcionka</string>
+   </property>
+  </action>
+  <action name="textMenuAA" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Antyaliasing</string>
+   </property>
+  </action>
+  <action name="penMenuAA" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Antyaliasing</string>
+   </property>
+  </action>
+  <action name="fileMenuPrint" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/print.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Drukuj</string>
+   </property>
+   <property name="statusTip" >
+    <string>Drukuj plik</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PaintArea</class>
+   <extends>QWidget</extends>
+   <header>paintarea.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QScrollArea</class>
+   <extends>QFrame</extends>
+   <header location="global" >QScrollArea</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="mywindow.qrc" />
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,131 @@
+<ui version="4.0" >
+ <class>Form</class>
+ <widget class="QWidget" name="Form" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>431</width>
+    <height>252</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Okna obsługi plików i folderów</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="mywindow.qrc" >:/images/qt.png</iconset>
+  </property>
+  <widget class="QPushButton" name="pushButton_1" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>413</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>getExistingDirectory</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>413</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>getOpenFileName</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>413</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>getOpenFileNames</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>413</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>getSaveFileName</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_1" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>411</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>220</y>
+     <width>411</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>161</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Użyj okien systemowych</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="mywindow.qrc" />
+ </resources>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX" >
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY" >
+   <number>10</number>
+  </property>
+  <property name="gridSnapX" >
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY" >
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible" >
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>

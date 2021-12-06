@@ -1,0 +1,142 @@
+<ui version="4.0" >
+ <class>Window</class>
+ <widget class="QMainWindow" name="Window" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Edytor tekstu - QtDesigner</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="mywindow.qrc" >:/images/qt.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <layout class="QVBoxLayout" >
+    <item>
+     <widget class="QTextEdit" name="textEdit" />
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu" >
+    <property name="title" >
+     <string>&amp;Plik</string>
+    </property>
+    <addaction name="fileMenuNew" />
+    <addaction name="fileMenuOpen" />
+    <addaction name="fileMenuSave" />
+    <addaction name="fileMenuSaveAs" />
+    <addaction name="fileMenuPrint" />
+    <addaction name="separator" />
+    <addaction name="fileMenuQuit" />
+   </widget>
+   <addaction name="fileMenu" />
+  </widget>
+  <widget class="QStatusBar" name="statusBar" >
+   <property name="statusTip" >
+    <string/>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar" >
+   <property name="windowTitle" >
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea" >
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak" >
+    <bool>false</bool>
+   </attribute>
+   <addaction name="fileMenuNew" />
+   <addaction name="fileMenuOpen" />
+   <addaction name="fileMenuSave" />
+   <addaction name="fileMenuPrint" />
+  </widget>
+  <action name="fileMenuNew" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/new.png</iconset>
+   </property>
+   <property name="text" >
+    <string>&amp;Nowy</string>
+   </property>
+   <property name="statusTip" >
+    <string>Tworzy nowy plik</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="fileMenuOpen" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/open.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Otwórz</string>
+   </property>
+   <property name="statusTip" >
+    <string>Odczytuje plik</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="fileMenuSave" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/save.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Zapisz</string>
+   </property>
+   <property name="statusTip" >
+    <string>Zapisuje bieżące zmiany</string>
+   </property>
+  </action>
+  <action name="fileMenuSaveAs" >
+   <property name="text" >
+    <string>Zapisz jako</string>
+   </property>
+   <property name="statusTip" >
+    <string>Zapisuje jako nowy plik</string>
+   </property>
+  </action>
+  <action name="fileMenuQuit" >
+   <property name="text" >
+    <string>Wyjście</string>
+   </property>
+   <property name="statusTip" >
+    <string>Zakończenie działania programu</string>
+   </property>
+  </action>
+  <action name="fileMenuPrint" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/print.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Drukuj</string>
+   </property>
+   <property name="statusTip" >
+    <string>Drukuje plik</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="mywindow.qrc" />
+ </resources>
+ <connections/>
+</ui>

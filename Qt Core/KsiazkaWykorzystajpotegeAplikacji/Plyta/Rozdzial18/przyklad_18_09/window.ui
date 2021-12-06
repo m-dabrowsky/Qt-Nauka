@@ -1,0 +1,120 @@
+<ui version="4.0" >
+ <class>Window</class>
+ <widget class="QMainWindow" name="Window" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Podgląd plików SVG (OpenGL)</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="mywindow.qrc" >:/images/qt.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <layout class="QVBoxLayout" >
+    <item>
+     <widget class="SvgGLWidget" native="1" name="SVGwidget" />
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu" >
+    <property name="title" >
+     <string>&amp;Plik</string>
+    </property>
+    <addaction name="fileMenuOpen" />
+    <addaction name="separator" />
+    <addaction name="fileMenuQuit" />
+   </widget>
+   <widget class="QMenu" name="menuAa" >
+    <property name="title" >
+     <string>Antyaliasing</string>
+    </property>
+    <addaction name="aaMenuOn" />
+    <addaction name="aaMenuOff" />
+   </widget>
+   <addaction name="fileMenu" />
+   <addaction name="menuAa" />
+  </widget>
+  <widget class="QStatusBar" name="statusBar" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="statusTip" >
+    <string/>
+   </property>
+  </widget>
+  <action name="fileMenuOpen" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/open.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Otwórz</string>
+   </property>
+   <property name="statusTip" >
+    <string>Odczytuje plik</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="fileMenuQuit" >
+   <property name="text" >
+    <string>Wyjście</string>
+   </property>
+   <property name="statusTip" >
+    <string>Zakończenie działania programu</string>
+   </property>
+  </action>
+  <action name="aaMenuOn" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>false</bool>
+   </property>
+   <property name="text" >
+    <string>Włączony</string>
+   </property>
+  </action>
+  <action name="aaMenuOff" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Wyłączony</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SvgGLWidget</class>
+   <extends>QWidget</extends>
+   <header>svgglwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="mywindow.qrc" />
+ </resources>
+ <connections/>
+</ui>

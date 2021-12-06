@@ -1,0 +1,149 @@
+<ui version="4.0" >
+ <class>PrevWindow</class>
+ <widget class="QMainWindow" name="PrevWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Podgląd wydruku</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="mywindow.qrc" >:/images/qt.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <layout class="QVBoxLayout" >
+    <item>
+     <widget class="QScrollArea" name="scrollArea" >
+      <property name="frameShape" >
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow" >
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <layout class="QVBoxLayout" />
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar" >
+   <property name="statusTip" >
+    <string/>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar" >
+   <property name="windowTitle" >
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea" >
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak" >
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionPrint" />
+   <addaction name="actionPageSetup" />
+   <addaction name="actionPrev" />
+   <addaction name="actionNext" />
+   <addaction name="actionZoomIn" />
+   <addaction name="actionZoomOut" />
+   <addaction name="actionQuit" />
+  </widget>
+  <action name="actionQuit" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/standardbutton-close-32.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Wyjście</string>
+   </property>
+   <property name="statusTip" >
+    <string>Zamknięcie okna</string>
+   </property>
+  </action>
+  <action name="actionPrint" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/print.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Drukuj</string>
+   </property>
+   <property name="statusTip" >
+    <string>Drukuje plik</string>
+   </property>
+  </action>
+  <action name="actionPrev" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/left-32.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Poprzednia strona</string>
+   </property>
+   <property name="statusTip" >
+    <string>Poprzednia strona</string>
+   </property>
+  </action>
+  <action name="actionNext" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/right-32.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Następna strona</string>
+   </property>
+   <property name="statusTip" >
+    <string>Następna strona</string>
+   </property>
+  </action>
+  <action name="actionPageSetup" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/pagefold.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Ustawienia strony</string>
+   </property>
+   <property name="statusTip" >
+    <string>Ustawienia strony</string>
+   </property>
+  </action>
+  <action name="actionZoomIn" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/zoomin.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Powiększ</string>
+   </property>
+   <property name="statusTip" >
+    <string>Powiększenie podglądu</string>
+   </property>
+  </action>
+  <action name="actionZoomOut" >
+   <property name="icon" >
+    <iconset resource="mywindow.qrc" >:/images/zoomout.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Pomniejsz</string>
+   </property>
+   <property name="statusTip" >
+    <string>Pomniejszenie podglądu</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QScrollArea</class>
+   <extends>QFrame</extends>
+   <header location="global" >QScrollArea</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="mywindow.qrc" />
+ </resources>
+ <connections/>
+</ui>

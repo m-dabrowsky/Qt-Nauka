@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>468</width>
+    <height>397</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>451</width>
+      <height>89</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Połączenie</string>
+    </property>
+    <widget class="QPushButton" name="pushButtonDisconnect">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>60</y>
+       <width>191</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Rozłącz</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonConnect">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>60</y>
+       <width>221</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Połącz</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonSearch">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>30</y>
+       <width>221</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Szukaj</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>30</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>101</y>
+      <width>450</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Logi</string>
+    </property>
+    <widget class="QPushButton" name="pushButtonClear">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>431</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Wyczyść</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>265</y>
+      <width>450</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Sterowanie</string>
+    </property>
+    <widget class="QPushButton" name="pushButtonLedOn">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>30</y>
+       <width>211</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Włącz diodę</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonLedOff">
+     <property name="geometry">
+      <rect>
+       <x>228</x>
+       <y>30</y>
+       <width>211</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Wyłącz diodę</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>468</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
